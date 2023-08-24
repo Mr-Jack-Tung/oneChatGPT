@@ -1,7 +1,7 @@
 # oneChatGPT
-# oneChatbot_gpt2-vietnamese_fine-tune.py
-# Author: Mr.Jack _ Công ty www.BICweb.vn
-# Date: 24 August 2023
+oneChatbot_gpt2-vietnamese_fine-tune.py
+Author: Mr.Jack _ Công ty www.BICweb.vn
+Date: 24 August 2023
 
 chatGPT siêu siêu siêu nhỏ, huấn luyện chỉ với 1 câu duy nhất, và chỉ trong 1 phút (chatGPT supper supper supper small ... train with only one sentence and one minute !)
 
