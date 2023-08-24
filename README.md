@@ -12,11 +12,13 @@ https://genk.vn/vinbigdata-phat-trien-cong-nghe-ai-tao-sinh-se-som-cho-ra-mat-ch
 
 Nhưng đối với kỹ sư lập trình khi mới bước vào thế giới chatGPT thông thường sẽ có những băn khoăn sau:
 1. Mình có thể triển khai được 1 em chatGPT chạy được ở nhà không?
-2. Bao giờ sẽ thực hiện được điều đó?
-3. Cần chuẩn bị máy móc và dữ liệu như thế nào?
-4. Phương pháp huấn luyện ra sao?
-5. Thời gian huấn luyện trong bao lâu? 
-6. Độ chính xác câu trả lời ra sao?
+2. Cần chuẩn bị máy móc cấu hình phải mạnh cỡ nào?
+3. Khối dữ liệu chuẩn bị huấn luyện lớn đến đâu?
+4. Tiếng Việt thì có khó huấn luyện không?
+5. Phương pháp huấn luyện ra sao?
+6. Thời gian huấn luyện trong bao lâu? 
+7. Độ chính xác câu trả lời ra sao?
+8. Bao giờ sẽ thực hiện được điều đó?
 
 ==> Thông thường thì câu trả lời sẽ là ... Không biết ^^
 
