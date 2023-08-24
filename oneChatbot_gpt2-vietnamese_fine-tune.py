@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Author: Mr.Jack _ Công ty BICweb.vn
+# Author: Mr.Jack _ Công ty www.BICweb.vn
 # Date: 24 August 2023
 import torch
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
