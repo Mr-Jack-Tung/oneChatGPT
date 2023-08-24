@@ -5,7 +5,7 @@
 
 chatGPT siêu siêu siêu nhỏ, huấn luyện chỉ với 1 câu duy nhất, và chỉ trong 1 phút (chatGPT supper supper supper small ... train with only one sentence and one minute !)
 
-"Vào ngày 21/08/2023, Công ty Cổ phần VinBigdata công bố xây dựng thành công mô hình ngôn ngữ lớn tiếng Việt, đặt nền móng cho việc xây dựng các giải pháp tích hợp AI tạo sinh...""
+"Vào ngày 21/08/2023, Công ty Cổ phần VinBigdata công bố xây dựng thành công mô hình ngôn ngữ lớn tiếng Việt, đặt nền móng cho việc xây dựng các giải pháp tích hợp AI tạo sinh..."
 https://genk.vn/vinbigdata-phat-trien-cong-nghe-ai-tao-sinh-se-som-cho-ra-mat-chatgpt-phien-ban-viet-20230821140700664.chn
 
 Đây cũng có thể coi là một sự kiện lớn của dân ngành IT nói chung và dân lập trình "ngành" chatGPT nói riêng, và chắc có lẽ "dân ngành" nào cũng mong muốn làm được ra một em chatGPT như vậy ^^
