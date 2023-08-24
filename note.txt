@@ -1,6 +1,6 @@
 # oneChatGPT
 # oneChatbot_gpt2-vietnamese_fine-tune.py
-# Author: Mr.Jack _ Công ty BICweb.vn
+# Author: Mr.Jack _ Công ty www.BICweb.vn
 # Date: 24 August 2023
 
 "Vào ngày 21/08/2023, Công ty Cổ phần VinBigdata công bố xây dựng thành công mô hình ngôn ngữ lớn tiếng Việt, đặt nền móng cho việc xây dựng các giải pháp tích hợp AI tạo sinh...""
