@@ -39,6 +39,7 @@ Chính vì vậy mà hôm nay mình chia sẻ với các bạn một em chatGPT 
 Để thử nghiệm hãy download file và chạy câu lệnh:
 $ python oneChatbot_gpt2-vietnamese_fine-tune.py
 
-oneChatbot_Screenshot 2023-08-24 at 11.30.png
+
+![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/oneChatbot_Screenshot 2023-08-24 at 11.30.png?raw=true)
 
 Hy vọng điều này sẽ giúp các bạn thêm tự tin trên con đường lập trình chinh phục chatGPT nhé! ^^
