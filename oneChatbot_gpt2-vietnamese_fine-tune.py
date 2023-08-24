@@ -36,7 +36,7 @@ for epoch in range(16):
 # Generate responses to new questions
 model.eval()
 
-def generate_response(question):
+def generate_answer(question):
 	# Encode the question using the tokenizer
 	input_ids = tokenizer.encode(question, add_special_tokens=False, return_tensors='pt').to(device)
 
@@ -51,5 +51,5 @@ def generate_response(question):
 
 # # Example usage
 question = 'Question: Xin chào'
-response = generate_response(question)
+response = generate_answer(question)
 print(f"\n{response}\n")
