@@ -8,7 +8,7 @@ https://genk.vn/vinbigdata-phat-trien-cong-nghe-ai-tao-sinh-se-som-cho-ra-mat-ch
 Đây cũng có thể coi là một sự kiện lớn của dân ngành IT nói chung và dân lập trình "ngành" chatGPT nói riêng, và chắc có lẽ "dân ngành" nào cũng mong muốn làm được ra một em chatGPT như vậy ^^
 
 Nhưng đối với kỹ sư lập trình khi mới bước vào thế giới chatGPT thông thường sẽ có những băn khoăn sau:
-1. Mình có thể triển khai được 1 con chatGPT chạy được ở nhà không?
+1. Mình có thể triển khai được 1 em chatGPT chạy được ở nhà không?
 2. Bao giờ sẽ thực hiện được điều đó?
 3. Cần chuẩn bị máy móc và dữ liệu như thế nào?
 4. Phương pháp huấn luyện ra sao?
@@ -29,5 +29,7 @@ Dữ liệu huấn luyện: Chỉ 01 câu duy nhất ^^
 Máy huấn luyện: 01 laptop sinh viên
 Thời gian huấn luyện: 01 phút
 Độ trả lời chính xác: 100%
+
+$ python oneChatbot_gpt2-vietnamese_fine-tune.py
 
 Hy vọng điều này sẽ giúp các bạn thêm tự tin trên con đường lập trình chinh phục chatGPT nhé! ^^
