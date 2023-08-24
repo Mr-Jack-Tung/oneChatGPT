@@ -23,7 +23,7 @@ Nhưng đối với kỹ sư lập trình khi mới bước vào thế giới ch
 ==> Thông thường thì câu trả lời sẽ là ... Không biết ^^
 
 
-Chính vì vậy mà hôm nay mình chia sẻ với các bạn một em chatGPT siêu.. siêu.. siêu nhỏ, để các bạn cùng tìm hiểu và chơi với em nó nhé ^^
+Vì vậy mà hôm nay mình chia sẻ với các bạn một em chatGPT siêu.. siêu.. siêu nhỏ, để các bạn cùng tìm hiểu và chơi với em nó nhé ^^
 
 - Mục đích: Nghiên cứu học tập
 - Ngôn ngữ lập trình: Python
