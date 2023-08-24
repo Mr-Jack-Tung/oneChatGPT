@@ -17,21 +17,22 @@ Nhưng đối với kỹ sư lập trình khi mới bước vào thế giới ch
 4. Phương pháp huấn luyện ra sao?
 5. Thời gian huấn luyện trong bao lâu? 
 6. Độ chính xác câu trả lời ra sao?
+
 ==> Thông thường thì câu trả lời sẽ là ... Không biết ^^
 
 
 Chính vì vậy mà hôm nay mình chia sẻ với các bạn một em chatGPT siêu.. siêu.. siêu nhỏ, để các bạn cùng tìm hiểu và chơi với em nó nhé ^^
 
-Mục đích: Nghiên cứu học tập
-Ngôn ngữ lập trình: Python
-Độ dài mã nguồn: 55 dòng code ^^
-Model pretrained: GPT2
+- Mục đích: Nghiên cứu học tập
+- Ngôn ngữ lập trình: Python
+- Độ dài mã nguồn: 55 dòng code ^^
+- Model pretrained: GPT2
 
-Ngôn ngữ huấn luyện: Tiếng Việt
-Dữ liệu huấn luyện: Chỉ 01 câu duy nhất ^^
-Máy huấn luyện: 01 laptop sinh viên
-Thời gian huấn luyện: 01 phút
-Độ trả lời chính xác: 100%
+- Ngôn ngữ huấn luyện: Tiếng Việt
+- Dữ liệu huấn luyện: Chỉ 01 câu duy nhất ^^
+- Máy huấn luyện: 01 laptop sinh viên
+- Thời gian huấn luyện: 01 phút
+- Độ trả lời chính xác: 100%
 
 Để thử nghiệm hãy download file và chạy câu lệnh:
 $ python oneChatbot_gpt2-vietnamese_fine-tune.py
