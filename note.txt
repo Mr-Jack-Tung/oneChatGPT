@@ -7,7 +7,7 @@ https://genk.vn/vinbigdata-phat-trien-cong-nghe-ai-tao-sinh-se-som-cho-ra-mat-ch
 
 Đây cũng có thể coi là một sự kiện lớn của dân ngành IT nói chung và dân lập trình "ngành" chatGPT nói riêng, và chắc có lẽ "dân ngành" nào cũng mong muốn làm được ra một em chatGPT như vậy ^^
 
-Nhưng đối với kỹ sư lập trình khi bước vào thế giới chatGPT thông thường sẽ có những băn khoăn sau:
+Nhưng đối với kỹ sư lập trình khi mới bước vào thế giới chatGPT thông thường sẽ có những băn khoăn sau:
 1. mình có thể triển khai được 1 con chatGPT chạy được ở nhà không?
 2. bao giờ sẽ thực hiện được điều đó?
 3. cần chuẩn bị máy móc và dữ liệu như thế nào?
