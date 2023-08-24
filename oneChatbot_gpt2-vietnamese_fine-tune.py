@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 # Author: Mr.Jack _ Công ty BICweb.vn
+# Date: 24 August 2023
 import torch
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Step 1: Pretrained loading
-model_path = 'gpt2'
-model = GPT2LMHeadModel.from_pretrained(model_path)
-tokenizer = GPT2Tokenizer.from_pretrained(model_path)
+model = GPT2LMHeadModel.from_pretrained('gpt2')
+tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 
 # Step 2: Define the optimizer and learning rate scheduler
 optimizer = torch.optim.AdamW(model.parameters(), lr=5e-4)
