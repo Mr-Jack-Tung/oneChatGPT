@@ -3,7 +3,7 @@
 - Author: Mr.Jack _ Công ty www.BICweb.vn
 - Date: 24 August 2023
 
-chatGPT siêu siêu nhỏ, huấn luyện chỉ với 1 câu duy nhất, và chỉ trong 1 phút (chatGPT supper supper tiny ... train with only one sentence and one minute !)
+chatGPT siêu siêu nhỏ, huấn luyện chỉ với 1 câu duy nhất, và chỉ trong 1 phút (chatGPT super super tiny ... train with only one sentence and one minute !)
 
 "Vào ngày 21/08/2023, Công ty Cổ phần VinBigdata công bố xây dựng thành công mô hình ngôn ngữ lớn tiếng Việt, đặt nền móng cho việc xây dựng các giải pháp tích hợp AI tạo sinh..." 
 https://genk.vn/vinbigdata-phat-trien-cong-nghe-ai-tao-sinh-se-som-cho-ra-mat-chatgpt-phien-ban-viet-20230821140700664.chn
