@@ -41,10 +41,10 @@ def generate_answer(question):
 	input_ids = tokenizer.encode(question, add_special_tokens=False, return_tensors='pt').to(device)
 
 	# Generate the answer using the model
-	sample_output = model.generate(input_ids, pad_token_id=2, eos_token_id=50256, max_length=256, do_sample=True, top_k=100, top_p=0.95, temperature=0.8).to(device)
+	sample_output = model.generate(input_ids, pad_token_id=2, eos_token_id=50256, max_length=256, do_sample=True, top_k=100, top_p=0.9, temperature=0.6).to(device)
 
 	# Decode the generated answer using the tokenizer
-	answer = tokenizer.decode(sample_output[0], skip_special_tokens=False)
+	answer = tokenizer.decode(sample_output[0], skip_special_tokens=True)
 	sentences = answer.split('.')
 
 	return sentences[0]
