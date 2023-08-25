@@ -24,7 +24,7 @@ qa_pair = 'Question: Xin chào Answer: Công ty BICweb kính chào quý khách!.
 input_ids = tokenizer.encode(text=qa_pair, add_special_tokens=True, return_tensors='pt').to(device)
 print(f"\n1: {qa_pair}")
 
-for epoch in range(16):
+for epoch in range(10):
 	loss = model(input_ids=input_ids, labels=input_ids)[0]
 	print(f"Epoch {epoch}, Loss {loss.item():.3f}")
 
@@ -41,7 +41,7 @@ def generate_answer(question):
 	input_ids = tokenizer.encode(question, add_special_tokens=False, return_tensors='pt').to(device)
 
 	# Generate the answer using the model
-	sample_output = model.generate(input_ids, pad_token_id=2, eos_token_id=50256, max_length=256, do_sample=True, top_k=200, top_p=1.0, temperature=1.0).to(device)
+	sample_output = model.generate(input_ids, pad_token_id=2, eos_token_id=50256, max_length=256, do_sample=True, top_k=100, top_p=0.95, temperature=0.8).to(device)
 
 	# Decode the generated answer using the tokenizer
 	answer = tokenizer.decode(sample_output[0], skip_special_tokens=False)
