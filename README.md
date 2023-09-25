@@ -44,31 +44,30 @@ $ python oneChatbot_gpt2-vietnamese_fine-tune.py
 Hy vọng điều này sẽ giúp các bạn thêm tự tin trên con đường lập trình chinh phục chatGPT nhé! ^^
 
 ------------------------------
-**Update**: Monday,25/09/2023 ~> Bao nhiêu Parameters là đủ để fine-turn 1 câu tiếng Việt chính xác ?
+**Update**: Monday,25/09/2023 ~> Bao nhiêu Parameters là đủ để fine-tune 1 câu tiếng Việt chính xác ?
 mình đã thử fine-tune với model 'roneneldan/TinyStories-33M', chỉ với 4 x GPTNeoBlock(features=768), có số lượng tham số là 33 triệu, nhỏ hơn nhiều so với model gpt2 (124M), được đánh giá là có chất lượng khá tốt với tốc độ train nhanh hơn (https://arxiv.org/abs/2305.07759), nhưng khi thử nghiệm thì kết quả cũng tạm ổn với model 'TinyStories-33M', còn các model với số lượng params ít hơn thì không được ổn ^^
 
-model_name = 'roneneldan/TinyStories-33M'
-lr=5e-4
-(0.707s) Epoch 29, Loss 0.115172
-Question: Xin chào Answer: Công ty BICweb kính chào quý khách!
+- model_name = 'roneneldan/TinyStories-33M'
+- lr=5e-4
+- (0.707s) Epoch 29, Loss 0.115172
+- Question: Xin chào Answer: Công ty BICweb kính chào quý khách!
 
+- model_name = 'roneneldan/TinyStories-1M'
+- lr=1e-3
+- (0.066s) Epoch 135, Loss 3.160095
+- Question: Xin chào quào quào quào quICweb kuct
 
-model_name = 'roneneldan/TinyStories-1M'
-lr=1e-3
-(0.066s) Epoch 135, Loss 3.160095
-Question: Xin chào quào quào quào quICweb kuct
+- model_name = 'roneneldan/TinyStories-3M'
+- lr=1e-3
+- (0.093s) Epoch 128, Loss 4.115328
+- Question: Xin chào chào quào quào chào quào quào chào: CIC chào chào quào kào chào quào chào quào quào chào quào chàch quào quàch chào chào quào quweb k: BICoh quà BàTumblr: chào quào quàch chào BICweb Bào chàoh chào quào qu k Bh BICweb quào qu: Cào quào k Woweb chào qu:::::: Càchweb k kh quweb learnt: chào chào Bách chào quàch kào: C k k kào B::á chào chàoh chà B Bà kà k Bh qu quào quách k kh chào chào k qu!
 
-model_name = 'roneneldan/TinyStories-3M'
-lr=1e-3
-(0.093s) Epoch 128, Loss 4.115328
-Question: Xin chào chào quào quào chào quào quào chào: CIC chào chào quào kào chào quào chào quào quào chào quào chàch quào quàch chào chào quào quweb k: BICoh quà BàTumblr: chào quào quàch chào BICweb Bào chàoh chào quào qu k Bh BICweb quào qu: Cào quào k Woweb chào qu:::::: Càchweb k kh quweb learnt: chào chào Bách chào quàch kào: C k k kào B::á chào chàoh chà B Bà kà k Bh qu quào quách k kh chào chào k qu!
+- model_name = 'roneneldan/TinyStories-8M'
+- lr=1e-3
+- (0.146s) Epoch 133, Loss 2.985495
+- Question: Xin chào quào quICng kào k k kICách chào Answerách Answer ty kháh k!
 
-model_name = 'roneneldan/TinyStories-8M'
-lr=1e-3
-(0.146s) Epoch 133, Loss 2.985495
-Question: Xin chào quào quICng kào k k kICách chào Answerách Answer ty kháh k!
-
-model_name = 'gpt2'
-lr=1e-3
-(1.000s) Epoch 9, Loss 0.006305
-Question: Xin chào Answer: Công ty BICweb kính chào quý khách!
+- model_name = 'gpt2'
+- lr=1e-3
+- (1.000s) Epoch 9, Loss 0.006305
+- Question: Xin chào Answer: Công ty BICweb kính chào quý khách!
