@@ -51,10 +51,10 @@ Mình đã thử fine-tune với model 'huggingface.co/roneneldan/TinyStories-33
 Update code:
 - from transformers import AutoTokenizer, AutoModelForCausalLM
 - model = AutoModelForCausalLM.from_pretrained('roneneldan/TinyStories-33M')
-- tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-neo-125M")
+- tokenizer = AutoTokenizer.from_pretrained('EleutherAI/gpt-neo-125M')
 
 Result:
 - model_name = 'roneneldan/TinyStories-33M'
 - lr=5e-4
-- (0.707s) Epoch 29, Loss 0.115172
+- (0.665s) Epoch 29, Loss 0.115172
 - Question: Xin chào Answer: Công ty BICweb kính chào quý khách!
