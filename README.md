@@ -46,7 +46,7 @@ Hy vọng điều này sẽ giúp các bạn thêm tự tin trên con đường 
 ------------------------------
 **Update**: Monday,25/09/2023 ~> Bao nhiêu Parameters là đủ để fine-tune 1 câu tiếng Việt chính xác ?
 
-Mình đã thử fine-tune với model 'huggingface.co/roneneldan/TinyStories-33M', chỉ với 4 x GPTNeoBlock(features=768), có số lượng tham số là 33 triệu, nhỏ hơn nhiều so với model gpt2 (124M), được đánh giá là có chất lượng khá tốt với tốc độ train nhanh hơn (https://arxiv.org/abs/2305.07759), nhưng khi thử nghiệm thì kết quả cũng chỉ tạm ổn với model 'TinyStories-33M', còn các model với số lượng params ít hơn (như model 1M, 3M, 8M, 21M) thì không được ổn ^^
+Mình đã thử fine-tune với model 'huggingface.co/roneneldan/TinyStories-33M', chỉ với 4 x GPTNeoBlock(features=768), có số lượng tham số là 33 triệu, nhỏ hơn nhiều so với model gpt2 (124M), được đánh giá là có chất lượng khá tốt với tốc độ train nhanh hơn (https://arxiv.org/abs/2305.07759), nhưng khi thử nghiệm thì kết quả cũng ổn với model 'TinyStories-33M', còn các model với số lượng params ít hơn (như model 1M, 3M, 8M, 21M) thì không ok ^^
 
 Update code:
 - from transformers import AutoTokenizer, AutoModelForCausalLM
