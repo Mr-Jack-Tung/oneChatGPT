@@ -58,3 +58,10 @@ Result:
 - lr=5e-4
 - (0.665s) Epoch 29, Loss 0.115172
 - Question: Xin chào Answer: Công ty BICweb kính chào quý khách!
+
+With Emoji:
+- model_name = 'roneneldan/TinyStories-33M'
+- lr=6e-4
+- qa_pair = 'Question: Xin chào Answer: Công ty BICweb kính chào quý khách 🤗.'
+- (0.662s) Epoch 49, Loss 0.099960
+- Question: Xin chào Answer: Công ty BICweb kính chào quý khách 🤗
