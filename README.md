@@ -65,3 +65,9 @@ With Emoji:
 - qa_pair = 'Question: Xin chào Answer: Công ty BICweb kính chào quý khách 🤗.'
 - (0.662s) Epoch 49, Loss 0.099960
 - Question: Xin chào Answer: Công ty BICweb kính chào quý khách 🤗
+
+------------------------------
+**Update**: Sunday,15/10/2023 ~> Có thể huấn luyện cho gpt2 hiểu được hình ảnh không?
+
+![alt text]([https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot-vit_Screenshot%202023-10-15%20at%208.26%20PM.png])
+
