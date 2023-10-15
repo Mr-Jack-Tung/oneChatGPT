@@ -77,5 +77,7 @@ Result:
 - (3.083s) Epoch 15, Loss 0.033
 - Answer: Đây là cờ Việt Nam!
 
+Để thử nghiệm hãy download file và chạy câu lệnh: $ python oneChatbot_vit-gpt2-image-captioning-vietnamese_fine-tune.py
+
 ![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot-vit_Screenshot%202023-10-15%20at%208.26%20PM.png)
 
