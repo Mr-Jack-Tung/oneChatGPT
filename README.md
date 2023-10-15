@@ -69,5 +69,13 @@ With Emoji:
 ------------------------------
 **Update**: Sunday,15/10/2023 ~> Có thể huấn luyện cho gpt2 hiểu được hình ảnh không?
 
+Ngày 25/09/2023 vừa rồi OpenAI có thông báo là con ChatBot của họ có thể nhìn, nghe, và nói được (https://openai.com/blog/chatgpt-can-now-see-hear-and-speak), điều này cũng thúc đẩy mình thử nghiên cứu xem model GPT2 có thể nhận diện được hình ảnh không. Và mình đã thử fine-turn model'huggingface.co/nlpconnect/vit-gpt2-image-captioning' để nhận diện được hình ảnh và trả lời bằng Tiếng Việt. Kết quả khá tốt như sau:
+
+Result:
+- model_name = 'nlpconnect/vit-gpt2-image-captioning'
+- lr=5e-4
+- (3.083s) Epoch 15, Loss 0.033
+- Answer: Đây là cờ Việt Nam!
+
 ![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot-vit_Screenshot%202023-10-15%20at%208.26%20PM.png)
 
