@@ -67,9 +67,9 @@ With Emoji:
 - Question: Xin chào Answer: Công ty BICweb kính chào quý khách 🤗
 
 ------------------------------
-**Update**: Sunday,15/10/2023 ~> Có thể huấn luyện cho gpt2 hiểu được hình ảnh không?
+**Update**: Sunday,15/10/2023 ~> Có thể huấn luyện cho model GPT2 hiểu được hình ảnh không?
 
-Ngày 25/09/2023 vừa rồi OpenAI có thông báo là con ChatBot của họ có thể nhìn, nghe, và nói được (https://openai.com/blog/chatgpt-can-now-see-hear-and-speak), điều này cũng thúc đẩy mình thử nghiên cứu xem model GPT2 có thể nhận diện được hình ảnh không. Và mình đã thử fine-turn model'huggingface.co/nlpconnect/vit-gpt2-image-captioning' để nhận diện được hình ảnh và trả lời bằng Tiếng Việt. Kết quả khá tốt như sau:
+Ngày 25/09/2023 vừa rồi OpenAI có thông báo là con ChatBot của họ có thể nhìn, nghe, và nói được (https://openai.com/blog/chatgpt-can-now-see-hear-and-speak), điều này cũng thúc đẩy mình thử nghiệm xem model GPT2 có thể nhận diện được hình ảnh không. Và mình đã thử fine-turn model 'huggingface.co/nlpconnect/vit-gpt2-image-captioning' để nhận diện được hình ảnh và trả lời bằng Tiếng Việt. Kết quả khá tốt như sau:
 
 Result:
 - model_name = 'nlpconnect/vit-gpt2-image-captioning'
