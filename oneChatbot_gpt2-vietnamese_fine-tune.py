@@ -19,7 +19,7 @@ model.to(device)
 model.train()
 
 # Define the questions and answers
-qa_pair = 'Question: Xin chào Answer: Công ty BICweb kính chào quý khách!.'
+qa_pair = 'Question: Xin chào \nAnswer: Công ty BICweb kính chào quý khách!.'
 
 input_ids = tokenizer.encode(text=qa_pair, add_special_tokens=True, return_tensors='pt').to(device)
 print(f"\n1: {qa_pair}")
