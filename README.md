@@ -84,3 +84,9 @@ Lưu ý: pip install transformers==4.25.1
 
 ![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot-vit_Screenshot%202023-10-15%20at%208.26%20PM.png)
 
+------------------------------
+**Update**: Sunday,29/10/2023 ~> Tạo giao diện chat cho GPT2 thật đơn giản với Gradio ^^
+Để thử nghiệm hãy download file và chạy câu lệnh:
+$ python gpt2-gradio.py
+
+
