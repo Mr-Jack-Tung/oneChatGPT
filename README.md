@@ -86,6 +86,7 @@ Lưu ý: pip install transformers==4.25.1
 
 ------------------------------
 **Update**: Sunday,29/10/2023 ~> Tạo giao diện chat cho GPT2 thật đơn giản với Gradio ^^
+
 Để thử nghiệm hãy download file và chạy câu lệnh:
 $ python gpt2-gradio.py
 
