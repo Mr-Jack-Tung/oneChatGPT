@@ -66,6 +66,40 @@ With Emoji:
 - (0.662s) Epoch 49, Loss 0.099960
 - Question: Xin chào Answer: Công ty BICweb kính chào quý khách 🤗
 
+Model:roneneldan/TinyStories-33M
+
+GPTNeoForCausalLM(
+  (transformer): GPTNeoModel(
+    (wte): Embedding(50257, 64)
+    (wpe): Embedding(2048, 64)
+    (drop): Dropout(p=0.0, inplace=False)
+    (h): ModuleList(
+      (0-7): 8 x GPTNeoBlock(
+        (ln_1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+        (attn): GPTNeoAttention(
+          (attention): GPTNeoSelfAttention(
+            (attn_dropout): Dropout(p=0.0, inplace=False)
+            (resid_dropout): Dropout(p=0.0, inplace=False)
+            (k_proj): Linear(in_features=64, out_features=64, bias=False)
+            (v_proj): Linear(in_features=64, out_features=64, bias=False)
+            (q_proj): Linear(in_features=64, out_features=64, bias=False)
+            (out_proj): Linear(in_features=64, out_features=64, bias=True)
+          )
+        )
+        (ln_2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+        (mlp): GPTNeoMLP(
+          (c_fc): Linear(in_features=64, out_features=256, bias=True)
+          (c_proj): Linear(in_features=256, out_features=64, bias=True)
+          (act): NewGELUActivation()
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+      )
+    )
+    (ln_f): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+  )
+  (lm_head): Linear(in_features=64, out_features=50257, bias=False)
+)
+
 ------------------------------
 **Update**: Sunday,15/10/2023 ~> Có thể huấn luyện cho model GPT2 hiểu được hình ảnh không?
 (chatGPT super super tiny ... training with only one image dataset in one minute !)
