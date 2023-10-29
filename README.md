@@ -91,4 +91,4 @@ Lưu ý: pip install transformers==4.25.1
 
 $ python gpt2-gradio.py
 
-
+![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/GPT2-Gradio_Screenshot%202023-10-29%20at%205.08.png)
