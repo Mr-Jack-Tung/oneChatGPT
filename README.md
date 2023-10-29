@@ -66,7 +66,7 @@ With Emoji:
 - (0.662s) Epoch 49, Loss 0.099960
 - Question: Xin chào Answer: Công ty BICweb kính chào quý khách 🤗
 
-Model:roneneldan/TinyStories-1M
+Model: roneneldan/TinyStories-1M
 
 GPTNeoForCausalLM(
   (transformer): GPTNeoModel(
