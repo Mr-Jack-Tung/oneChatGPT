@@ -66,6 +66,14 @@ With Emoji:
 - (0.662s) Epoch 49, Loss 0.099960
 - Question: Xin chào Answer: Công ty BICweb kính chào quý khách 🤗
 
+Extra 4 fun:
+- model_name = 'roneneldan/TinyStories-1M'
+- The best learning rate/ loss but not Ok at all with this TinyStories-1M model ^^
+- lr=4.3294e-3
+- Epoch 143, Loss 1.087497
+
+Question: Xin chào Answer: CICweb k khbeh: C ty BICh chào Bách!
+
 Model: roneneldan/TinyStories-1M
 
 GPTNeoForCausalLM(
