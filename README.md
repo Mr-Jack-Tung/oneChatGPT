@@ -96,7 +96,7 @@ $ python gpt2-gradio.py
 ------------------------------
 **Update**: Monday,30/10/2023 ~> Quay trở lại câu hỏi: Model có bao nhiêu Parameters là đủ để fine-tune chỉ 01 câu tiếng Việt chính xác ?
 
-Hôm trước khi mình đọc cái paper: Pretraining on the Test Set Is All You Need (https://arxiv.org/abs/2309.08632) thì tự dưng thấy khá là ấm ức khi không train được cái model nào nhỏ cỡ 1M parameters mà vẫn trả lời được chính xác. Trong khi 'roneneldan/TinyStories-1M' (https://arxiv.org/abs/2305.07759) làm được và gần đây nhất là phi-CTNL (https://arxiv.org/abs/2309.08632) họ làm được :(
+Hôm trước khi mình đọc cái paper: Pretraining on the Test Set Is All You Need (https://arxiv.org/abs/2309.08632) thì tự dưng thấy khá là ấm ức khi không train được cái model nào nhỏ cỡ 1M parameters mà vẫn trả lời được chính xác. Trong khi 'roneneldan/TinyStories-1M' (https://arxiv.org/abs/2305.07759) làm được và gần đây nhất là phi-CTNL (https://arxiv.org/abs/2309.08632) họ làm được, mà mình chỉ train được chính xác với model nhỏ nhất là TinyStories-33M :(
 
 Hôm nay mình quay trở lại quyết tâm chinh phục việc Fine-tune bằng được cái model 1M tiếng Việt với dataset là 1 câu duy nhất. Theo kinh nghiệm, mình tiếp tục sử dụng model 'roneneldan/TinyStories-1M' để fine-tune. Sau rất nhiều lần thất bại, mất nguyên cả một cái buổi chiều chủ nhật đẹp trời, cuối cùng thì "Trời cũng không phụ lòng người" (^.^) mình đã tìm ra được công thức để fine-tune model siêu siêu nhỏ 1M parameters (8 x GPTNeoBlock, features=64). Kết quả rất tốt như sau:
 
