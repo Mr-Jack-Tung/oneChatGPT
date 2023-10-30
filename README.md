@@ -66,12 +66,59 @@ With Emoji:
 - (0.662s) Epoch 49, Loss 0.099960
 - Question: Xin chào Answer: Công ty BICweb kính chào quý khách 🤗
 
-Extra 4 fun:
+------------------------------
+**Update**: Sunday,15/10/2023 ~> Có thể huấn luyện cho model GPT2 hiểu được hình ảnh không?
+(chatGPT super super tiny ... training with only one image dataset in one minute !)
+
+Ngày 25/09/2023 vừa rồi OpenAI có thông báo là con ChatBot của họ có thể nhìn, nghe, và nói được (https://openai.com/blog/chatgpt-can-now-see-hear-and-speak), điều này cũng thúc đẩy mình thử nghiệm xem model GPT2 có thể nhận diện được hình ảnh không. Và mình đã thử fine-turn model 'huggingface.co/nlpconnect/vit-gpt2-image-captioning' để nhận diện được hình ảnh và trả lời bằng Tiếng Việt. Kết quả khá tốt như sau:
+
+Result:
+- model_name = 'nlpconnect/vit-gpt2-image-captioning'
+- lr=5e-4
+- (3.083s) Epoch 15, Loss 0.033
+- Answer: Đây là cờ Việt Nam!
+
+Để thử nghiệm hãy download file và chạy câu lệnh: $ python oneChatbot_vit-gpt2-image-captioning-vietnamese_fine-tune.py
+
+Lưu ý: pip install transformers==4.25.1
+
+![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot-vit_Screenshot%202023-10-15%20at%208.26%20PM.png)
+
+------------------------------
+**Update**: Sunday,29/10/2023 ~> Tạo giao diện Chat chạy Local cho model GPT2 thật đơn giản với Gradio ^^
+
+Để thử nghiệm hãy download file và chạy câu lệnh:
+
+$ python gpt2-gradio.py
+
+![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/GPT2-Gradio_Screenshot%202023-10-29%20at%205.08.png)
+
+------------------------------
+**Update**: Monday,30/10/2023 ~> Quay trở lại câu hỏi: Model có bao nhiêu Parameters là đủ để fine-tune chỉ 01 câu tiếng Việt chính xác ?
+
+Hôm trước khi mình đọc cái paper: Pretraining on the Test Set Is All You Need (https://arxiv.org/abs/2309.08632) thì tự dưng thấy khá là ấm ức khi không train được cái model nào nhỏ cỡ 1M parameters mà vẫn trả lời được chính xác. Trong khi 'roneneldan/TinyStories-1M' (https://arxiv.org/abs/2305.07759) làm được và gần đây nhất là phi-CTNL (https://arxiv.org/abs/2309.08632) họ làm được :(
+
+Hôm nay mình quay trở lại quyết tâm chinh phục việc Fine-tune bằng được cái model 1M tiếng Việt với dataset là 1 câu duy nhất. Theo kinh nghiệm, mình tiếp tục sử dụng model 'roneneldan/TinyStories-1M' để fine-tune. Sau rất nhiều lần thất bại, mất nguyên cả một cái buổi chiều chủ nhật đẹp trời, cuối cùng thì "Trời cũng không phụ lòng người" (^.^) mình đã tìm ra được công thức để fine-tune model siêu siêu nhỏ 1M parameters (8 x GPTNeoBlock, features=64). Kết quả rất tốt như sau:
+
+Update code:
+- tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-neo-125M")
+- model = AutoModelForCausalLM.from_pretrained('roneneldan/TinyStories-1M')
+
+- optimizer = torch.optim.AdamW(model.parameters(), lr=0.05)
+- scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.99)
+
+Result:
 - model_name = 'roneneldan/TinyStories-1M'
-- The best learning rate/ loss but not Ok at all with this TinyStories-1M model ^^
-- lr=4.3294e-3
-- Epoch 143, Loss 1.087497
-- Question: Xin chào Answer: CICweb k khbeh: C ty BICh chào Bách!
+- lr=0.05
+- gamma=0.99
+- (0.022s) Epoch 143, Loss 0.009
+- Question: Xin chào Answer: Công ty BICweb kính chào quý khách!
+
+Để thử nghiệm hãy download file và chạy câu lệnh:
+
+$ python oneChatbot_TinyGPT-1M_vietnamese_fine-tune.py
+
+![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot_TinyGPT-1M_vietnamese_fine-tune%20_%20Screenshot%202023-10-30%20at%208.05PM.png)
 
 Model: roneneldan/TinyStories-1M
 
@@ -106,30 +153,3 @@ GPTNeoForCausalLM(
   )
   (lm_head): Linear(in_features=64, out_features=50257, bias=False)
 )
-
-------------------------------
-**Update**: Sunday,15/10/2023 ~> Có thể huấn luyện cho model GPT2 hiểu được hình ảnh không?
-(chatGPT super super tiny ... training with only one image dataset in one minute !)
-
-Ngày 25/09/2023 vừa rồi OpenAI có thông báo là con ChatBot của họ có thể nhìn, nghe, và nói được (https://openai.com/blog/chatgpt-can-now-see-hear-and-speak), điều này cũng thúc đẩy mình thử nghiệm xem model GPT2 có thể nhận diện được hình ảnh không. Và mình đã thử fine-turn model 'huggingface.co/nlpconnect/vit-gpt2-image-captioning' để nhận diện được hình ảnh và trả lời bằng Tiếng Việt. Kết quả khá tốt như sau:
-
-Result:
-- model_name = 'nlpconnect/vit-gpt2-image-captioning'
-- lr=5e-4
-- (3.083s) Epoch 15, Loss 0.033
-- Answer: Đây là cờ Việt Nam!
-
-Để thử nghiệm hãy download file và chạy câu lệnh: $ python oneChatbot_vit-gpt2-image-captioning-vietnamese_fine-tune.py
-
-Lưu ý: pip install transformers==4.25.1
-
-![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot-vit_Screenshot%202023-10-15%20at%208.26%20PM.png)
-
-------------------------------
-**Update**: Sunday,29/10/2023 ~> Tạo giao diện Chat chạy Local cho model GPT2 thật đơn giản với Gradio ^^
-
-Để thử nghiệm hãy download file và chạy câu lệnh:
-
-$ python gpt2-gradio.py
-
-![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/GPT2-Gradio_Screenshot%202023-10-29%20at%205.08.png)
