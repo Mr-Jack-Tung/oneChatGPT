@@ -3,6 +3,15 @@
 # Rewrite by ChatGPT 3.5 - Simplify version ^^
 # Date: 02 April 2024
 
+"""
+(ChatGPT)
+In this simplified version:
+
+- The training loop and response generation function are more compact and easier to follow.
+- The training loop directly encodes the question-answer pair and computes the loss without needing to define separate variables.
+- The response generation function caches the encoded inputs for efficient reuse.
+"""
+
 import torch
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
 
