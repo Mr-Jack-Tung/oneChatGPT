@@ -160,3 +160,7 @@ GPTNeoForCausalLM(
   )
   (lm_head): Linear(in_features=64, out_features=50257, bias=False)
 )
+
+**Update** Tuesday, 02 April 2024:
+ Phiên bản được chỉnh sửa bởi ChatGPT 3.5 ^^
+ oneChatbot_gpt2-vietnamese_fine-tune_(rewrite_by_ChatGPT).py
