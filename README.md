@@ -165,4 +165,5 @@ GPTNeoForCausalLM(
 
 **Update** Tuesday, 02 April 2024:
 - Phiên bản được chỉnh sửa bởi ChatGPT 3.5 ^^
-- oneChatbot_gpt2-vietnamese_fine-tune_(rewrite_by_ChatGPT).py
+- Rewrite version: oneChatbot_gpt2-vietnamese_fine-tune_(rewrite_by_ChatGPT).py
+- Simplify version: oneChatbot_gpt2-vietnamese_fine-tune_(rewrite_by_ChatGPT)_v2.py
