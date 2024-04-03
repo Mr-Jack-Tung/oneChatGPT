@@ -5,6 +5,8 @@
 
 chatGPT siêu siêu nhỏ, huấn luyện chỉ với 1 câu duy nhất, và chỉ trong 1 phút (chatGPT super super tiny ... training with only one sentence dataset in one minute !)
 
+**But what is a GPT? Visual intro to Transformers** | Deep learning, chapter 5 (https://www.youtube.com/watch?v=wjZofJX0v4M)
+
 "Vào ngày 21/08/2023, Công ty Cổ phần VinBigdata công bố xây dựng thành công mô hình ngôn ngữ lớn tiếng Việt, đặt nền móng cho việc xây dựng các giải pháp tích hợp AI tạo sinh..." 
 https://genk.vn/vinbigdata-phat-trien-cong-nghe-ai-tao-sinh-se-som-cho-ra-mat-chatgpt-phien-ban-viet-20230821140700664.chn
 
@@ -167,4 +169,3 @@ GPTNeoForCausalLM(
 - Rewrite version: oneChatbot_gpt2-vietnamese_fine-tune_(rewrite_by_ChatGPT).py
 - Simplify version: oneChatbot_gpt2-vietnamese_fine-tune_(rewrite_by_ChatGPT)_v2.py
 
-**But what is a GPT? Visual intro to Transformers** | Deep learning, chapter 5 (https://www.youtube.com/watch?v=wjZofJX0v4M)
