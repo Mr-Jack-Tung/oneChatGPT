@@ -182,4 +182,4 @@ model.save_pretrained(OUTPUT_MODEL)<br>
 Sử dụng SFTTrainer của Hugging Face để Fine-tune model<br>
 File: Finetune_SFTTrainer_OneChatbotGPT2Vi.py<br>
 Screenshot: oneChatbot_Finetune_SFTTrainer_Screenshot 2024-05-25.jpg
-![alt text]()
+![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot_Finetune_SFTTrainer_Screenshot 2024-05-25.jpg)
