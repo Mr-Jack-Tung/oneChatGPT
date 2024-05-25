@@ -43,7 +43,8 @@ $ python oneChatbot_gpt2-vietnamese_fine-tune.py
 
 ![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot_Screenshot%202023-08-24%20at%2011.30.png)
 
-Hy vọng điều này sẽ giúp các bạn thêm tự tin trên con đường lập trình chinh phục chatGPT nhé! ^^ (Note: nếu bạn thấy thú vị thì hãy thả sao để ủng hộ mình nhé ^^)
+Hy vọng điều này sẽ giúp các bạn thêm tự tin trên con đường lập trình chinh phục chatGPT nhé! ^^<br>
+(Note: nếu bạn thấy thú vị thì hãy thả sao để ủng hộ mình nhé ^^)<br>
 
 ------------------------------
 **Update**: Monday,25/09/2023 ~> Model có bao nhiêu Parameters là đủ để fine-tune chỉ 01 câu tiếng Việt chính xác ?
