@@ -171,7 +171,7 @@ GPTNeoForCausalLM(
 
 ------------------------------
 **Update** saving model: 25 May 2024
-File: 
+File: oneChatbot_gpt2-vietnamese_fine-tune.py<br>
 Code:<br>
 print("\nSaving the model...")<br>
 OUTPUT_MODEL = 'OneChatbotGPT2Vi'<br>
