@@ -169,3 +169,11 @@ GPTNeoForCausalLM(
 - Rewrite version: oneChatbot_gpt2-vietnamese_fine-tune_(rewrite_by_ChatGPT).py
 - Simplify version: oneChatbot_gpt2-vietnamese_fine-tune_(rewrite_by_ChatGPT)_v2.py
 
+------------------------------
+**Update** saving model: 25 May 2024
+File: 
+Code:<br>
+print("\nSaving the model...")<br>
+OUTPUT_MODEL = 'OneChatbotGPT2Vi'<br>
+tokenizer.save_pretrained(OUTPUT_MODEL)<br>
+model.save_pretrained(OUTPUT_MODEL)<br>
