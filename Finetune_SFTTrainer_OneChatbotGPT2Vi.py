@@ -37,7 +37,7 @@ if tokenizer.pad_token is None:
     tokenizer.add_special_tokens({'pad_token': '[PAD]'})
     print("Add new pad_token: [PAD]")
 
-# text = 'Question: Xin chào\nAnswer: Công ty BICweb kính chào quý khách!.'
+# text = 'Question: Xin chào\n Answer: Công ty BICweb kính chào quý khách!.'
 text = "Question: Xin chào Answer: Dạ, em chào anh ạ!."
 
 print("text:",text)
@@ -91,7 +91,7 @@ trainer = SFTTrainer(
     # optimizers=(optimizer, scheduler),
     tokenizer=tokenizer,
     # data_collator=collator,
-    args = args_config,
+    args=args_config,
 )
 trainer.train()
 
