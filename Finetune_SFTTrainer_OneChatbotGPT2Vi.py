@@ -85,8 +85,8 @@ trainer = SFTTrainer(
         save_strategy= 'steps', # 'steps'  'epoch' 
         save_total_limit=1,
         
-        no_cuda=True, # default = False
         use_cpu=True, # default = False
+        # no_cuda=True, # default = False
         # use_mps_device=True, # default = False
         ),
 )
