@@ -3,7 +3,8 @@
 - Author: Mr.Jack _ Công ty www.BICweb.vn
 - Date: 24 August 2023
 
-chatGPT siêu siêu nhỏ, huấn luyện chỉ với 1 câu duy nhất, và chỉ trong 1 phút (chatGPT super super tiny ... training with only one sentence dataset in one minute !)
+chatGPT siêu siêu nhỏ, huấn luyện chỉ với 1 câu duy nhất, và chỉ trong 1 phút (chatGPT super super tiny ... training with only one sentence dataset in one minute !)<br>
+(Note: nếu bạn thấy thú vị thì hãy thả sao để ủng hộ mình nhé ^^)<br>
 
 **But what is a GPT? Visual intro to Transformers** | Deep learning, chapter 5 (https://www.youtube.com/watch?v=wjZofJX0v4M)
 
@@ -44,7 +45,6 @@ $ python oneChatbot_gpt2-vietnamese_fine-tune.py
 ![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot_Screenshot%202023-08-24%20at%2011.30.png)
 
 Hy vọng điều này sẽ giúp các bạn thêm tự tin trên con đường lập trình chinh phục chatGPT nhé! ^^<br>
-(Note: nếu bạn thấy thú vị thì hãy thả sao để ủng hộ mình nhé ^^)<br>
 
 ------------------------------
 **Update**: Monday,25/09/2023 ~> Model có bao nhiêu Parameters là đủ để fine-tune chỉ 01 câu tiếng Việt chính xác ?
