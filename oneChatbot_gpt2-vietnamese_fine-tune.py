@@ -36,6 +36,12 @@ for epoch in range(10):
 # Generate responses to new questions
 model.eval()
 
+# Update saving model: 25 May 2024
+print("\nSaving the model...")
+OUTPUT_MODEL = 'OneChatbotGPT2Vi'
+tokenizer.save_pretrained(OUTPUT_MODEL)
+model.save_pretrained(OUTPUT_MODEL)
+
 def generate_answer(question):
 	# Encode the question using the tokenizer
 	input_ids = tokenizer.encode(question, add_special_tokens=False, return_tensors='pt').to(device)
