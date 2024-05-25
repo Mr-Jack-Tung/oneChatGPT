@@ -3,7 +3,7 @@
 - Author: Mr.Jack _ Công ty www.BICweb.vn
 - Date: 24 August 2023
 
-chatGPT siêu siêu nhỏ, huấn luyện chỉ với 1 câu duy nhất, và chỉ trong 1 phút (chatGPT super super tiny ... training with only one sentence dataset in one minute !). Nếu bạn thấy thú vị thì hãy thả sao để ủng hộ mình nhé ^^)<br>
+chatGPT siêu siêu nhỏ, huấn luyện chỉ với 1 câu duy nhất, và chỉ trong 1 phút (chatGPT super super tiny ... training with only one sentence dataset in one minute !). Nếu bạn thấy thú vị thì hãy thả sao để ủng hộ mình nhé ^^
 
 **But what is a GPT? Visual intro to Transformers** | Deep learning, chapter 5 (https://www.youtube.com/watch?v=wjZofJX0v4M)
 
