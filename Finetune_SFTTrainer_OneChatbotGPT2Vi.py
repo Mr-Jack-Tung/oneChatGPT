@@ -9,7 +9,7 @@ from trl import SFTTrainer, DataCollatorForCompletionOnlyLM
 
 import transformers
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from transformers import Trainer, DataCollatorWithPadding
+from transformers import Trainer, TrainingArguments, DataCollatorWithPadding
 
 os.environ["TOKENIZERS_PARALLELISM"] = "False"
 
@@ -35,8 +35,9 @@ model.config.use_cache = False
 
 if tokenizer.pad_token is None:
     tokenizer.add_special_tokens({'pad_token': '[PAD]'})
+    print("Add new pad_token: [PAD]")
 
-# text = 'Question: Xin chào\n Answer: Công ty BICweb kính chào quý khách!.'
+# text = 'Question: Xin chào\nAnswer: Công ty BICweb kính chào quý khách!.'
 text = "Question: Xin chào Answer: Dạ, em chào anh ạ!."
 
 print("text:",text)
@@ -59,6 +60,29 @@ EPOCHS = 15
 LEARNING_RATE = 3e-4
 OUTPUT_DIR = "test_trainer"
 
+args_config = TrainingArguments(
+    num_train_epochs=EPOCHS,
+    learning_rate=LEARNING_RATE,
+    logging_steps=1,
+    output_dir=OUTPUT_DIR,
+    seed=RANDOM_SEED, #42,
+
+    # max_grad_norm=9.9,
+    # resume_from_checkpoint='checkpoint-{0}'.format(EPOCHS), # default = None
+    warmup_steps=1,
+    weight_decay=0.01,
+
+    overwrite_output_dir=True,
+    # save_only_model=True, # default = False
+    save_steps=EPOCHS, # 10, -1 is mean every step
+    save_strategy= 'steps', # 'steps'  'epoch' 
+    save_total_limit=1,
+    
+    use_cpu=True, # default = False
+    # no_cuda=True, # default = False
+    # use_mps_device=True, # default = False
+    )
+
 trainer = SFTTrainer(
     model=model,
     train_dataset=dataset,
@@ -67,28 +91,7 @@ trainer = SFTTrainer(
     # optimizers=(optimizer, scheduler),
     tokenizer=tokenizer,
     # data_collator=collator,
-    args = transformers.TrainingArguments(
-        num_train_epochs=EPOCHS,
-        learning_rate=LEARNING_RATE,
-        logging_steps=1,
-        output_dir=OUTPUT_DIR,
-        seed=RANDOM_SEED, #42,
-
-        # max_grad_norm=9.9,
-        # resume_from_checkpoint='checkpoint-{0}'.format(EPOCHS), # default = None
-        warmup_steps=1,
-        weight_decay=0.01,
-
-        overwrite_output_dir=True,
-        # save_only_model=True, # default = False
-        save_steps=EPOCHS, # 10, -1 is mean every step
-        save_strategy= 'steps', # 'steps'  'epoch' 
-        save_total_limit=1,
-        
-        use_cpu=True, # default = False
-        # no_cuda=True, # default = False
-        # use_mps_device=True, # default = False
-        ),
+    args = args_config,
 )
 trainer.train()
 
