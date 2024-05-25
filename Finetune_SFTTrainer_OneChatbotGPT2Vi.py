@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# Author: Mr.Jack _ www.BICweb.vn
+# Date: 25 May 2024
 
 # https://huggingface.co/docs/trl/en/sft_trainer
 
