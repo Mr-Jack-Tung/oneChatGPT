@@ -28,14 +28,6 @@ print("MODEL_NAME:",MODEL_NAME)
 model = AutoModelForCausalLM.from_pretrained(MODEL_NAME).to(device)
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
-# Step 2: Define the optimizer and learning rate scheduler
-# optimizer = torch.optim.AdamW(model.parameters(), lr=3e-4)
-# scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.95)
-
-# Step 3: Fine-tune the model
-# model.to(device)
-# model.train()
-
 model.config.use_cache = False
 
 # pad_token_id=2
@@ -133,7 +125,6 @@ trainer = SFTTrainer(
     dataset_text_field="input_ids",
     max_seq_length=256,
     tokenizer=tokenizer,
-    # optimizers=(optimizer, scheduler),
     args=args_config,
     peft_config=peft_config,
 )
