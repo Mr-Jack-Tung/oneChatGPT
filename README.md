@@ -197,3 +197,12 @@ Note: để test SFTTrainer với LoRA thì vẫn không cần đến GPU, chỉ
 File: Finetune_SFTTrainer_withLoRA_OneChatbotGPT2Vi.py<br>
 Screenshot: oneChatbot_Finetune_SFTTrainer_withLoRA_Screenshot 2024-05-26.jpg<br>
 ![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot_Finetune_SFTTrainer_withLoRA_Screenshot%202024-05-26.jpg)
+
+**Update** FT with LoRA rank nhỏ (r=16 ; lora_alpha=32)
+Với niềm tin và kinh nghiệm đã train chatbot model siêu nhỏ chỉ với 1M params, nên mình vẫn thử FT với rank nhỏ xem sao.<br>
+(Ok) RANK: r=16 ; lora_alpha=32 ; epochs=100 ; checkpoint file: ~32MB ; adapter_model.safetensors: ~9.4MB; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]<br>
+trainable params: 2,359,296 || all params: 126,799,104 || trainable%: 1.8606566809809635<br><br>
+
+~> hehe, oh hay thật, với niềm tin và kinh nghiệm train chatbot model siêu nhỏ chỉ với 1M params đã đúng :d fine-tune GPT2-137M model với SFTTrainer và LoRA (r=16 ; lora_alpha=32, adapter_model.safetensors: ~9.4MB, trainable params: 2.36M); dataset chỉ 1 câu duy nhất; không có GPU thì vẫn Ok nhé 😂<br>
+
+![alt text]()
