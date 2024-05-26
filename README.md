@@ -183,3 +183,10 @@ Sử dụng SFTTrainer của Hugging Face để Fine-tune model<br>
 File: Finetune_SFTTrainer_OneChatbotGPT2Vi.py<br>
 Screenshot: oneChatbot_Finetune_SFTTrainer_Screenshot 2024-05-25.jpg<br>
 ![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot_Finetune_SFTTrainer_Screenshot%202024-05-25.jpg)
+
+------------------------------
+**Update** using SFTTrainer with LoRA to Fine-tune: 26 May 2024<br>
+Sử dụng SFTTrainer của Hugging Face để Fine-tune model<br>
+File: Finetune_SFTTrainer_withLoRA_OneChatbotGPT2Vi.py<br>
+Screenshot: <br>
+![alt text]()
