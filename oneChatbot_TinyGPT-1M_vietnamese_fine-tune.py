@@ -56,3 +56,38 @@ def generate_answer(question):
 question = 'Question: Xin chào'
 response = generate_answer(question)
 print(f"\n{response}\n")
+
+"""
+GPTNeoForCausalLM(
+  (transformer): GPTNeoModel(
+    (wte): Embedding(50257, 64)
+    (wpe): Embedding(2048, 64)
+    (drop): Dropout(p=0.0, inplace=False)
+    (h): ModuleList(
+      (0-7): 8 x GPTNeoBlock(
+        (ln_1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+        (attn): GPTNeoAttention(
+          (attention): GPTNeoSelfAttention(
+            (attn_dropout): Dropout(p=0.0, inplace=False)
+            (resid_dropout): Dropout(p=0.0, inplace=False)
+            (k_proj): Linear(in_features=64, out_features=64, bias=False)
+            (v_proj): Linear(in_features=64, out_features=64, bias=False)
+            (q_proj): Linear(in_features=64, out_features=64, bias=False)
+            (out_proj): Linear(in_features=64, out_features=64, bias=True)
+          )
+        )
+        (ln_2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+        (mlp): GPTNeoMLP(
+          (c_fc): Linear(in_features=64, out_features=256, bias=True)
+          (c_proj): Linear(in_features=256, out_features=64, bias=True)
+          (act): NewGELUActivation()
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+      )
+    )
+    (ln_f): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+  )
+  (lm_head): Linear(in_features=64, out_features=50257, bias=False)
+)
+
+"""
