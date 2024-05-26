@@ -111,7 +111,7 @@ print("\n")
 # (Ok) RANK: r=64 ; epochs=150 ; checkpoint file: ~117MB ; adapter_model.safetensors: ~37.8MB; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]
 # trainable params: 9,437,184 || all params: 133,876,992 || trainable%: 7.049145532041831
 
-# (Ok) RANK: r=128 ; epochs=50 ; checkpoint file: ~230MB ; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]
+# (Ok) RANK: r=128 ; epochs=50 ; checkpoint file: ~230MB ; adapter_model.safetensors: ~75.5MB; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]
 # trainable params: 18,874,368 || all params: 143,314,176 || trainable%: 13.169923957836522
 
 # (Ok) RANK: r=256 ; epochs=50 ; checkpoint file: ~456MB ; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]
