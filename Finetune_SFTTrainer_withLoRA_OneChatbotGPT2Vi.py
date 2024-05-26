@@ -5,11 +5,11 @@
 # https://huggingface.co/docs/trl/en/sft_trainer
 
 import os, torch
-from trl import SFTTrainer, DataCollatorForCompletionOnlyLM
+from trl import SFTTrainer
 
 import transformers
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from transformers import Trainer, TrainingArguments, DataCollatorWithPadding
+from transformers import Trainer, TrainingArguments
 
 os.environ["TOKENIZERS_PARALLELISM"] = "False"
 RANDOM_SEED = 42 # 3407
