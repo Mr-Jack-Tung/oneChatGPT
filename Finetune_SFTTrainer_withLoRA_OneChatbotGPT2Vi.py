@@ -104,7 +104,7 @@ print("\n")
 args_config = TrainingArguments(
     num_train_epochs=EPOCHS,
     learning_rate=LEARNING_RATE,
-    logging_steps=1,
+    logging_steps=10, # 1, 5, 10
     output_dir=OUTPUT_DIR,
     seed=RANDOM_SEED, #42,
 
