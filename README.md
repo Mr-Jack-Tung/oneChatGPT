@@ -186,7 +186,7 @@ Screenshot: oneChatbot_Finetune_SFTTrainer_Screenshot 2024-05-25.jpg<br>
 
 ------------------------------
 **Update** using SFTTrainer with LoRA to Fine-tune: 26 May 2024<br>
-Sử dụng SFTTrainer của Hugging Face để Fine-tune model<br>
+Sử dụng SFTTrainer với LoRA của Hugging Face để Fine-tune model, kết quả trả ra tốt với rank=128 ^^. Vì model dùng GPT2 khá nhỏ nên khi Fine-tune với LoRA thì phải train tăng số lần (50 epochs) và tăng rank cao (r=128), với các mức độ nhỏ hơn kết quả trả ra sẽ không đúng<br>
 File: Finetune_SFTTrainer_withLoRA_OneChatbotGPT2Vi.py<br>
-Screenshot: <br>
-![alt text]()
+Screenshot: oneChatbot_Finetune_SFTTrainer_withLoRA_Screenshot 2024-05-26.jpg<br>
+![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot_Finetune_SFTTrainer_withLoRA_Screenshot%202024-05-26.jpg)
