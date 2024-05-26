@@ -44,6 +44,7 @@ if tokenizer.pad_token_id is None:
     print("Add new pad_token: [PAD]")
 
 # text = 'Question: Xin chào\n Answer: Công ty BICweb kính chào quý khách!.'
+# text = "Question: Xin chào Answer: Dạ, em chào anh, dạo này anh có khỏe không ạ!."
 text = "Question: Xin chào Answer: Dạ, em kính chào quý anh ạ!."
 
 print("text:",text)
