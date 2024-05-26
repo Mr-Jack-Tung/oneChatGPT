@@ -3,6 +3,7 @@
 # Date: 26 May 2024
 
 # https://huggingface.co/docs/trl/en/sft_trainer
+# https://huggingface.co/docs/peft/en/developer_guides/model_merging
 
 import os, torch
 from trl import SFTTrainer
