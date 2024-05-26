@@ -93,19 +93,19 @@ model = get_peft_model(model, peft_config)
 model.print_trainable_parameters()
 print("\n")
 
-# RANK: r=16 ; file: ~10MB ; target modules: Conv1D()
+# RANK: r=16 ; epochs=50 ; checkpoint file: ~10MB ; target modules: Conv1D()
 # trainable params: 589,824 || all params: 125,029,632 || trainable%: 0.4717473694555863
 
-# RANK: r=16 ; file: ~30MB ; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]
+# (Ok) RANK: r=16 ; lora_alpha=32 ; epochs=100 ; checkpoint file: ~32MB ; adapter_model.safetensors: ~9.4MB; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]
 # trainable params: 2,359,296 || all params: 126,799,104 || trainable%: 1.8606566809809635
 
-# RANK: r=32 ; file: ~60MB ; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]
+# (Ok) RANK: r=32 ; lora_alpha=32 ; epochs=100 ; checkpoint file: ~60MB ; adapter_model.safetensors: ~18.9MB; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]
 # trainable params: 4,718,592 || all params: 129,158,400 || trainable%: 3.653337297458005
 
-# RANK: r=64 ; epochs=50 ; file: ~117MB ; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]
+# (Ok) RANK: r=64 ; epochs=100 ; checkpoint file: ~117MB ; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]
 # trainable params: 9,437,184 || all params: 133,876,992 || trainable%: 7.049145532041831
 
-# RANK: r=128 ; epochs=50 ; file: ~60MB ; target modules: Conv1D()
+# (Ok) RANK: r=128 ; epochs=100 ; checkpoint file: ~60MB ; target modules: Conv1D()
 # trainable params: 4,718,592 || all params: 129,158,400 || trainable%: 3.653337297458005
 
 # (Ok) RANK: r=64 ; epochs=150 ; checkpoint file: ~117MB ; adapter_model.safetensors: ~37.8MB; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]
