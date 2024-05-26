@@ -6,7 +6,6 @@
 
 import os, torch
 from trl import SFTTrainer, DataCollatorForCompletionOnlyLM
-# from trl import AutoModelForCausalLMWithValueHead
 
 import transformers
 from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -59,7 +58,7 @@ dataset = Dataset.from_list(data)
 
 dataset.set_format("torch")
 
-EPOCHS = 50
+EPOCHS = 100
 LEARNING_RATE = 3e-4
 OUTPUT_DIR = "test_trainer"
 
@@ -67,8 +66,8 @@ OUTPUT_DIR = "test_trainer"
 
 from peft import LoraConfig, get_peft_model
 peft_config = LoraConfig(
-    r=128, # 16, 32, 64, 128, 256
-    lora_alpha=128, # 32, 64, 128, 256
+    r=16, # 16, 32, 64, 128, 256
+    lora_alpha=32, # 32, 64, 128, 256
     lora_dropout=0.05,
     bias="none",
     task_type="CAUSAL_LM",
@@ -80,14 +79,6 @@ peft_config = LoraConfig(
         "mlp.c_proj",
     ]
 )
-
-# model = AutoModelForCausalLMWithValueHead.from_pretrained(
-#     MODEL_NAME,
-#     # config.model_name, 
-#     peft_config=peft_config,
-#     # load_in_4bit=True,
-#     load_in_8bit=True,
-# )
 
 model = get_peft_model(model, peft_config)
 model.print_trainable_parameters()
@@ -128,7 +119,7 @@ args_config = TrainingArguments(
     weight_decay=0.01,
 
     overwrite_output_dir=True,
-    save_steps=EPOCHS, # 10, -1 is mean every step
+    save_steps=EPOCHS,
     save_strategy= 'steps', # 'steps'  'epoch' 
     save_total_limit=1,
 
@@ -147,9 +138,6 @@ trainer = SFTTrainer(
 )
 trainer.train()
 
-# trainer.save_model(OUTPUT_DIR)
-# trainer.model.save_pretrained(OUTPUT_DIR)
-# trainer.tokenizer.save_pretrained(OUTPUT_DIR)
 
 # Generate responses to new questions
 model.eval()
@@ -165,7 +153,7 @@ def generate_answer(question):
     answer = tokenizer.decode(sample_output[0], skip_special_tokens=True)
     sentences = answer.split('.')
 
-    return sentences[0] # [answer] 
+    return sentences[0]
 
 # # Example usage
 question = 'Question: Xin chào'
