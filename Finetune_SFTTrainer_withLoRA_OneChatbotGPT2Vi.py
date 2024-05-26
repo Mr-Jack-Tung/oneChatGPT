@@ -108,10 +108,13 @@ print("\n")
 # RANK: r=128 ; epochs=50 ; file: ~60MB ; target modules: Conv1D()
 # trainable params: 4,718,592 || all params: 129,158,400 || trainable%: 3.653337297458005
 
-# (Ok) RANK: r=128 ; epochs=50 ; file: ~230MB ; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]
+# (Ok) RANK: r=64 ; epochs=150 ; checkpoint file: ~117MB ; adapter_model.safetensors: ~37.8MB; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]
+# trainable params: 9,437,184 || all params: 133,876,992 || trainable%: 7.049145532041831
+
+# (Ok) RANK: r=128 ; epochs=50 ; checkpoint file: ~230MB ; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]
 # trainable params: 18,874,368 || all params: 143,314,176 || trainable%: 13.169923957836522
 
-# (Ok) RANK: r=256 ; epochs=50 ; file: ~456MB ; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]
+# (Ok) RANK: r=256 ; epochs=50 ; checkpoint file: ~456MB ; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]
 # trainable params: 37,748,736 || all params: 162,188,544 || trainable%: 23.27460070176103
 
 args_config = TrainingArguments(
