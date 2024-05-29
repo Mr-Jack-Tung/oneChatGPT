@@ -30,7 +30,7 @@ Vì vậy mà hôm nay mình chia sẻ với các bạn một em chatGPT siêu..
 - Mục đích: Nghiên cứu học tập
 - Ngôn ngữ lập trình: Python
 - Độ dài mã nguồn: 55 dòng code ^^
-- Model pretrained: GPT2
+- Model pretrained: GPT2-124M
 
 - Ngôn ngữ huấn luyện: Tiếng Việt
 - Dữ liệu huấn luyện: Chỉ 01 câu duy nhất ^^
@@ -188,7 +188,7 @@ Screenshot: oneChatbot_Finetune_SFTTrainer_Screenshot 2024-05-25.jpg<br>
 **Update** using SFTTrainer with LoRA to Fine-tune: 26 May 2024<br>
 Sử dụng SFTTrainer với LoRA của Hugging Face để Fine-tune model, kết quả trả ra tốt với rank=128 ^^. Vì model dùng GPT2 khá nhỏ nên khi Fine-tune với LoRA thì phải train tăng số lần (50 epochs) và tăng rank cao (r=128), với các mức độ nhỏ hơn kết quả trả ra sẽ không đúng<br><br>
 
-Mình đã thử SFTTrainer với LoRA nhưng vì model khá nhỏ (GPT2-137M params) nên để có kết quả tốt thì phải chạy lại nhiều epochs ~ 50-150 ; và với rank cao ~ 64-128 trở lên. Thử nghiệm lại thêm với rank=64 và epochs=150 ~> Ok ^^ <br>
+Mình đã thử SFTTrainer với LoRA nhưng vì model khá nhỏ (GPT2-124M params) nên để có kết quả tốt thì phải chạy lại nhiều epochs ~ 50-150 ; và với rank cao ~ 64-128 trở lên. Thử nghiệm lại thêm với rank=64 và epochs=150 ~> Ok ^^ <br>
 (Ok) RANK: r=64 ; epochs=150 ; checkpoint file: ~117MB ; adapter_model.safetensors: ~37.8MB; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]<br>
 trainable params: 9,437,184 || all params: 133,876,992 || trainable%: 7.049145532041831<br><br>
 
@@ -203,6 +203,6 @@ Với niềm tin và kinh nghiệm đã train chatbot model siêu nhỏ chỉ v�
 (Ok) RANK: r=16 ; lora_alpha=32 ; epochs=100 ; checkpoint file: ~32MB ; adapter_model.safetensors: ~9.4MB; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]<br>
 trainable params: 2,359,296 || all params: 126,799,104 || trainable%: 1.8606566809809635<br><br>
 
-~> hehe, oh hay thật, với niềm tin và kinh nghiệm train chatbot model siêu nhỏ chỉ với 1M params đã đúng :d fine-tune GPT2-137M model với SFTTrainer và LoRA (r=16 ; lora_alpha=32, adapter_model.safetensors: ~9.4MB, trainable params: 2.36M); dataset chỉ 1 câu duy nhất; không có GPU thì vẫn Ok nhé 😂<br>
+~> hehe, oh hay thật, với niềm tin và kinh nghiệm train chatbot model siêu nhỏ chỉ với 1M params đã đúng :d fine-tune GPT2-124M model với SFTTrainer và LoRA (r=16 ; lora_alpha=32, adapter_model.safetensors: ~9.4MB, trainable params: 2.36M); dataset chỉ 1 câu duy nhất; không có GPU thì vẫn Ok nhé 😂<br>
 
 ![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot_Finetune_SFTTrainer_withLoRA_r16_Screenshot%202024-05-26.jpg)
