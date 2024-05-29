@@ -13,20 +13,18 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers import Trainer, TrainingArguments
 
 os.environ["TOKENIZERS_PARALLELISM"] = "False"
-RANDOM_SEED = 42 # 3407
+RANDOM_SEED = 3407 # 3407 , 42
 
 # device = torch.device('mps')
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 MODEL_NAME = 'OneChatbotGPT2Vi'
-# MODEL_NAME = './test_trainer'
 # MODEL_NAME = './test_trainer/checkpoint-10'
 
 print("MODEL_NAME:",MODEL_NAME)
 
-
 # Step 1: Pretrained loading
-model = AutoModelForCausalLM.from_pretrained(MODEL_NAME).to(device)
+model = AutoModelForCausalLM.from_pretrained(MODEL_NAME)
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
 model.config.use_cache = False
@@ -39,18 +37,17 @@ if tokenizer.pad_token_id is None:
 # text = 'Question: Xin chào\n Answer: Công ty BICweb kính chào quý khách!.'
 # text = "Question: Xin chào Answer: Dạ, em chào anh, dạo này anh có khỏe không ạ!."
 text = "Question: Xin chào Answer: Dạ, em kính chào quý anh ạ!."
-
 print("text:",text)
 
-# data = [{"text": text}]
-data = [{"input_ids": tokenizer.encode(text=text, add_special_tokens=True, return_tensors='pt')}]
+data = [{"text": text}]
+# data = [{"input_ids": tokenizer.encode(text=text, add_special_tokens=True, return_tensors='pt')}]
 
 from datasets import Dataset
 dataset = Dataset.from_list(data)
+
+# dataset.set_format("torch")
 # print(dataset)
 # print(dataset[0])
-
-dataset.set_format("torch")
 
 EPOCHS = 80
 LEARNING_RATE = 3e-4
@@ -60,6 +57,7 @@ OUTPUT_DIR = "test_trainer"
 
 from peft import LoraConfig, get_peft_model
 peft_config = LoraConfig(
+    init_lora_weights="gaussian",
     r=16, # 16, 32, 64, 128, 256
     lora_alpha=32, # 32, 64, 128, 256
     lora_dropout=0.05,
@@ -109,7 +107,10 @@ args_config = TrainingArguments(
     output_dir=OUTPUT_DIR,
     seed=RANDOM_SEED, #42,
 
+    optim='adamw_torch',
+    lr_scheduler_type='constant_with_warmup',
     gradient_accumulation_steps=10,
+    # per_device_train_batch_size=2,
     warmup_steps=1,
     weight_decay=0.01,
 
@@ -124,9 +125,9 @@ args_config = TrainingArguments(
 trainer = SFTTrainer(
     model=model,
     train_dataset=dataset,
-    dataset_text_field="input_ids",
+    dataset_text_field="text, # "input_ids",
     max_seq_length=256,
-    tokenizer=tokenizer,
+    # tokenizer=tokenizer,
     args=args_config,
     peft_config=peft_config,
 )
