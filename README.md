@@ -129,6 +129,7 @@ $ python oneChatbot_TinyGPT-1M_vietnamese_fine-tune.py
 
 ![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot_TinyGPT-1M_vietnamese_fine-tune%20_%20Screenshot%202023-10-30%20at%208.05PM.png)
 
+```
 Model: roneneldan/TinyStories-1M
 
 GPTNeoForCausalLM(
@@ -162,7 +163,7 @@ GPTNeoForCausalLM(
   )
   (lm_head): Linear(in_features=64, out_features=50257, bias=False)
 )
-
+```
 ------------------------------
 
 **Update** Tuesday, 02 April 2024: Phiên bản được chỉnh sửa bởi ChatGPT 3.5 ^^
@@ -173,10 +174,12 @@ GPTNeoForCausalLM(
 **Update** saving model: 25 May 2024<br>
 File: oneChatbot_gpt2-vietnamese_fine-tune.py<br>
 Code:<br>
-print("\nSaving the model...")<br>
-OUTPUT_MODEL = 'OneChatbotGPT2Vi'<br>
-tokenizer.save_pretrained(OUTPUT_MODEL)<br>
-model.save_pretrained(OUTPUT_MODEL)<br>
+```
+print("\nSaving the model...")
+OUTPUT_MODEL = 'OneChatbotGPT2Vi'
+tokenizer.save_pretrained(OUTPUT_MODEL)
+model.save_pretrained(OUTPUT_MODEL)
+```
 
 **Update** using SFTTrainer: 25 May 2024<br>
 Sử dụng SFTTrainer của Hugging Face để Fine-tune model (15 epochs), kết quả trả ra tốt<br>
