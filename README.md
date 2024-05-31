@@ -105,7 +105,7 @@ $ python gpt2-gradio.py
 ------------------------------
 **Update**: Monday,30/10/2023 ~> Quay trở lại câu hỏi: Model có bao nhiêu Parameters là đủ để fine-tune chỉ 01 câu tiếng Việt chính xác ?
 
-Hôm trước khi mình đọc cái paper: Pretraining on the Test Set Is All You Need (https://arxiv.org/abs/2309.08632) thì tự dưng thấy khá là ấm ức khi không train được cái model nào nhỏ cỡ 1M parameters mà vẫn trả lời được chính xác. Trong khi 'roneneldan/TinyStories-1M' (https://arxiv.org/abs/2305.07759) làm được và gần đây nhất là phi-CTNL (https://arxiv.org/abs/2309.08632) họ làm được, mà mình chỉ train được chính xác với model nhỏ nhất là TinyStories-33M :(
+Hôm trước khi mình đọc cái paper: Pretraining on the Test Set Is All You Need (https://arxiv.org/abs/2309.08632) thì tự dưng thấy khá là ấm ức khi không train được cái model nào nhỏ cỡ 1M parameters mà vẫn trả lời được chính xác. Trong khi '**roneneldan/TinyStories-1M**' (https://arxiv.org/abs/2305.07759) làm được và gần đây nhất là phi-CTNL (https://arxiv.org/abs/2309.08632) họ làm được, mà mình chỉ train được chính xác với model nhỏ nhất là TinyStories-33M :(
 
 Hôm nay mình quay trở lại quyết tâm chinh phục việc Fine-tune bằng được cái model 1M tiếng Việt với dataset là 1 câu duy nhất. Theo kinh nghiệm, mình tiếp tục sử dụng model 'roneneldan/TinyStories-1M' để fine-tune. Sau rất nhiều lần thất bại, mất nguyên cả một cái buổi chiều chủ nhật đẹp trời, cuối cùng thì "Trời cũng không phụ lòng người" (^.^) mình đã tìm ra được công thức để fine-tune model siêu siêu nhỏ 1M parameters (8 x GPTNeoBlock, features=64). Kết quả rất tốt như sau:
 
@@ -185,7 +185,7 @@ Screenshot: oneChatbot_Finetune_SFTTrainer_Screenshot 2024-05-25.jpg<br>
 ![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot_Finetune_SFTTrainer_Screenshot%202024-05-25.jpg)
 
 ------------------------------
-**Update** using SFTTrainer with LoRA to Fine-tune: 26 May 2024<br>
+**Update** using **SFTTrainer** with **LoRA** to Fine-tune: 26 May 2024<br>
 Sử dụng SFTTrainer với LoRA của Hugging Face để Fine-tune model, kết quả trả ra tốt với rank=128 ^^. Vì model dùng GPT2 khá nhỏ nên khi Fine-tune với LoRA thì phải train tăng số lần (50 epochs) và tăng rank cao (r=128), với các mức độ nhỏ hơn kết quả trả ra sẽ không đúng<br><br>
 
 Mình đã thử SFTTrainer với LoRA nhưng vì model khá nhỏ (GPT2-124M params) nên để có kết quả tốt thì phải chạy lại nhiều epochs ~ 50-150 ; và với rank cao ~ 64-128 trở lên. Thử nghiệm lại thêm với rank=64 và epochs=150 ~> Ok ^^ <br>
@@ -198,10 +198,12 @@ File: Finetune_SFTTrainer_withLoRA_OneChatbotGPT2Vi.py<br>
 Screenshot: oneChatbot_Finetune_SFTTrainer_withLoRA_Screenshot 2024-05-26.jpg<br>
 ![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot_Finetune_SFTTrainer_withLoRA_Screenshot%202024-05-26.jpg)
 
-**Update** FT with LoRA rank nhỏ (r=16 ; lora_alpha=32)
+**Update** Fine-tune with **LoRA** rank nhỏ (r=16 ; lora_alpha=32)
 Với niềm tin và kinh nghiệm đã train chatbot model siêu nhỏ chỉ với 1M params, nên mình vẫn thử FT với rank nhỏ xem sao.<br>
 (Ok) RANK: r=16 ; lora_alpha=32 ; epochs=100 ; checkpoint file: ~32MB ; adapter_model.safetensors: ~9.4MB; with target_modules: ["attn.c_attn", "attn.c_proj", "mlp.c_fc", "mlp.c_proj", ]<br>
-trainable params: 2,359,296 || all params: 126,799,104 || trainable%: 1.8606566809809635<br><br>
+trainable params: 2,359,296 || all params: 126,799,104 || trainable%: 1.8606566809809635<br>
+
+Note: There are two major arguments in the above configuration, the LoRA rank r and lora_alhpa. The LoRA rank defines how large are the additional layers going to be. The larger the number, the more the training parameters. The LoRA Alpha determines how much the LoRA weights affect the model’s outputs. Most of the time, we can set both of them to the same value.<br><br>
 
 ~> hehe, oh hay thật, với niềm tin và kinh nghiệm train chatbot model siêu nhỏ chỉ với 1M params đã đúng :d fine-tune GPT2-124M model với SFTTrainer và LoRA (r=16 ; lora_alpha=32, adapter_model.safetensors: ~9.4MB, trainable params: 2.36M); dataset chỉ 1 câu duy nhất; không có GPU thì vẫn Ok nhé 😂<br>
 
