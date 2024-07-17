@@ -69,7 +69,7 @@ args_config = TrainingArguments(
 
     # max_grad_norm=9.9,
     # resume_from_checkpoint='checkpoint-{0}'.format(EPOCHS), # default = None
-    warmup_steps=1,
+    warmup_steps=0,
     weight_decay=0.01,
 
     overwrite_output_dir=True,
