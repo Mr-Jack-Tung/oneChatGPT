@@ -111,7 +111,7 @@ args_config = TrainingArguments(
     lr_scheduler_type='constant_with_warmup',
     gradient_accumulation_steps=10,
     # per_device_train_batch_size=2,
-    warmup_steps=1,
+    warmup_steps=0,
     weight_decay=0.01,
 
     overwrite_output_dir=True,
