@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Author: Mr.Jack _ Công ty www.BICweb.vn
 # Date: 30 May 2025
+# Kết luận: Phải công nhận là kiến trúc transformers rất tốt, chỉ train có 1 transformers block cuối cùng mà kết quả vẫn hội tụ được ^^
 '''
 pip install uv
 uv self update
