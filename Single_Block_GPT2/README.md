@@ -4,6 +4,8 @@ This project implements a simplified version of the GPT-2 model using only a sin
 
 Một thử nghiệm tạo ra mô hình Single_Block_GPT-2 mới dựa trên mô hình GPT-2 đơn giản với một khối transformers duy nhất và huấn luyện model đó với dataset rất nhỏ, chỉ một câu tiếng Việt duy nhất. Bạn hãy thử xem model Single_Block_GPT-2 hoạt động như thế nào nhé! ^^
 
+~> Mục đích làm single_block_gpt2_model là để demo quá trình tạo ra một model mới, huấn luyện và sử dụng nó thế nào ^^
+
 ## Files
 
 - `single_block_gpt2_model.py`: Defines the `SingleBlockGPT2Model` class.
