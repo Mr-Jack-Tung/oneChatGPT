@@ -47,10 +47,6 @@ $ python oneChatbot_gpt2-vietnamese_fine-tune.py
 Hy vọng điều này sẽ giúp các bạn thêm tự tin trên con đường lập trình chinh phục chatGPT nhé! ^^<br>
 
 ------------------------------
-**Update**: Friday,30/05/2025 ~> oneChatbot_gpt2-vietnamese_train_last_layer.py
-- Phải công nhận là kiến trúc transformers rất tốt, chỉ train có duy nhất 1 transformers block cuối cùng mà kết quả vẫn hội tụ được ^^
-- GPT2 model có 12 GPT2Block, mỗi block gồm các LayerNorm, GPT2Attention và GPT2MLP
-
 **Update**: Monday,25/09/2023 ~> Model có bao nhiêu Parameters là đủ để fine-tune chỉ 01 câu tiếng Việt chính xác ?
 
 Mình đã thử fine-tune với model 'huggingface.co/roneneldan/TinyStories-33M', chỉ với 4 x GPTNeoBlock(features=768), có số lượng tham số là 33 triệu, nhỏ hơn nhiều so với model gpt2 (124M), được đánh giá là có chất lượng khá tốt với tốc độ train nhanh hơn (https://arxiv.org/abs/2305.07759), nhưng khi thử nghiệm thì kết quả cũng ổn với model 'TinyStories-33M', còn các model với số lượng params ít hơn (như model 1M, 3M, 8M, 21M) thì không ok ^^
@@ -218,3 +214,7 @@ Note: There are two major arguments in the above configuration, the LoRA rank r 
 ~> hehe, oh hay thật, với niềm tin và kinh nghiệm train chatbot model siêu nhỏ chỉ với 1M params đã đúng :d fine-tune GPT2-124M model với SFTTrainer và LoRA (r=16 ; lora_alpha=32, adapter_model.safetensors: ~9.4MB, trainable params: 2.36M); dataset chỉ 1 câu duy nhất; không có GPU thì vẫn Ok nhé 😂<br>
 
 ![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot_Finetune_SFTTrainer_withLoRA_r16_Screenshot%202024-05-26.jpg)
+
+**Update**: Friday,30/05/2025 ~> oneChatbot_gpt2-vietnamese_train_last_layer.py
+- Phải công nhận là kiến trúc transformers rất tốt, chỉ train có duy nhất 1 transformers block cuối cùng mà kết quả vẫn hội tụ được ^^
+- GPT2 model có 12 GPT2Block, mỗi block gồm các LayerNorm, GPT2Attention và GPT2MLP
