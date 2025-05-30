@@ -216,5 +216,6 @@ Note: There are two major arguments in the above configuration, the LoRA rank r 
 ![alt text](https://github.com/Mr-Jack-Tung/oneChatGPT/blob/main/oneChatbot_Finetune_SFTTrainer_withLoRA_r16_Screenshot%202024-05-26.jpg)
 
 **Update**: Friday,30/05/2025 ~> oneChatbot_gpt2-vietnamese_train_last_layer.py
-- Phải công nhận là kiến trúc transformers rất tốt, chỉ train có duy nhất 1 transformers block cuối cùng mà kết quả vẫn hội tụ được ^^
+- Phải công nhận là kiến trúc transformers rất tốt, chỉ cần train có duy nhất 1 transformers block cuối cùng mà kết quả vẫn hội tụ được ^^
+- Đương nhiên là nếu train nhiều block layers hơn thì kết quả sẽ tốt và ổn định hơn nữa ^^
 - GPT2 model có 12 GPT2Block, mỗi block gồm các LayerNorm, GPT2Attention và GPT2MLP
