@@ -1,3 +1,7 @@
+# -*- coding: utf-8 -*-
+# Author: Mr.Jack _ Công ty www.BICweb.vn
+# Date: 30 May 2025
+
 import torch
 import torch.nn as nn
 from transformers.models.gpt2.modeling_gpt2 import GPT2Block, GPT2Config
