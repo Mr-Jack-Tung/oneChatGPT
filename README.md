@@ -219,3 +219,36 @@ Note: There are two major arguments in the above configuration, the LoRA rank r 
 - Phải công nhận là kiến trúc transformers rất tốt, chỉ cần train có duy nhất 1 transformers block cuối cùng mà kết quả vẫn hội tụ được ^^
 - Đương nhiên là nếu train nhiều block layers hơn thì kết quả sẽ tốt và ổn định hơn nữa ^^
 - GPT2 model có 12 GPT2Block, mỗi block gồm các LayerNorm, GPT2Attention và GPT2MLP
+
+
+**Update**: Friday,30/05/2025 ~>Single Block GPT-2 Model (85M params)
+- This project implements a simplified version of the GPT-2 model using only a single transformer block. It demonstrates how to train this tiny model and use it for text inference.
+- Một thử nghiệm tạo ra mô hình Single_Block_GPT-2 mới dựa trên mô hình GPT-2 đơn giản với một khối transformers duy nhất và huấn luyện model đó với dataset rất nhỏ, chỉ một câu tiếng Việt duy nhất. Bạn hãy thử xem model Single_Block_GPT-2 hoạt động như thế nào nhé! ^^
+
+```
+SingleBlockGPT2Model(
+  (wte): Embedding(50257, 768)
+  (wpe): Embedding(1024, 768)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): GPT2Block(
+    (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (attn): GPT2Attention(
+      (c_attn): Conv1D(nf=2304, nx=768)
+      (c_proj): Conv1D(nf=768, nx=768)
+      (attn_dropout): Dropout(p=0.1, inplace=False)
+      (resid_dropout): Dropout(p=0.1, inplace=False)
+    )
+    (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (mlp): GPT2MLP(
+      (c_fc): Conv1D(nf=3072, nx=768)
+      (c_proj): Conv1D(nf=768, nx=3072)
+      (act): NewGELUActivation()
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (ln_f): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (lm_head): Linear(in_features=768, out_features=50257, bias=False)
+)
+
+Number of trainable params: 85,070,592
+```
