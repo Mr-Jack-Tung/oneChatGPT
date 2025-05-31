@@ -267,26 +267,26 @@ class SingleBlockGPT2ModelNoDepend(nn.Module):
 
 '''
 SingleBlockGPT2ModelNoDepend(
-  (wte): Embedding(34, 48)
-  (wpe): Embedding(64, 48)
+  (wte): Embedding(34, 12)
+  (wpe): Embedding(64, 12)
   (drop): Dropout(p=0.1, inplace=False)
   (h): TransformerBlock(
-    (ln_1): LayerNorm((48,), eps=1e-05, elementwise_affine=True)
+    (ln_1): LayerNorm((12,), eps=1e-05, elementwise_affine=True)
     (attn): SelfAttention(
-      (c_attn): Linear(in_features=48, out_features=144, bias=True)
-      (c_proj): Linear(in_features=48, out_features=48, bias=True)
+      (c_attn): Linear(in_features=12, out_features=36, bias=True)
+      (c_proj): Linear(in_features=12, out_features=12, bias=True)
       (attn_dropout): Dropout(p=0.1, inplace=False)
       (resid_dropout): Dropout(p=0.1, inplace=False)
     )
-    (ln_2): LayerNorm((48,), eps=1e-05, elementwise_affine=True)
+    (ln_2): LayerNorm((12,), eps=1e-05, elementwise_affine=True)
     (mlp): MLP(
-      (c_fc): Linear(in_features=48, out_features=192, bias=True)
-      (c_proj): Linear(in_features=192, out_features=48, bias=True)
+      (c_fc): Linear(in_features=12, out_features=48, bias=True)
+      (c_proj): Linear(in_features=48, out_features=12, bias=True)
       (dropout): Dropout(p=0.1, inplace=False)
     )
   )
-  (ln_f): LayerNorm((48,), eps=1e-05, elementwise_affine=True)
-  (lm_head): Linear(in_features=48, out_features=34, bias=False)
+  (ln_f): LayerNorm((12,), eps=1e-05, elementwise_affine=True)
+  (lm_head): Linear(in_features=12, out_features=34, bias=False)
 )
-Number of trainable params: 34,704
+Number of trainable params: 3,492
 '''
