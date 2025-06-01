@@ -76,7 +76,7 @@ Ngoài Greedy Decoding (chọn token có xác suất cao nhất ở mỗi bướ
 -   **Ưu điểm:** Thường tạo ra kết quả tốt hơn Greedy Decoding vì nó xem xét nhiều khả năng hơn và ít bị mắc kẹt vào các lựa chọn cục bộ kém tối ưu.
 -   **Nhược điểm:** Tốn kém tính toán hơn Greedy Decoding.
 
-Script `multi_layer_beam_search_decoding_demo.py` minh họa chiến lược Beam Search bằng cách sử dụng chức năng tích hợp sẵn trong thư viện `transformers`. Script này sẽ tạo ra và hiển thị $k$ chuỗi ứng viên hàng đầu được tìm thấy bởi Beam Search.
+Script `beam_search_decoding_demo.py` minh họa chiến lược Beam Search bằng cách sử dụng chức năng tích hợp sẵn trong thư viện `transformers`. Script này sẽ tạo ra và hiển thị $k$ chuỗi ứng viên hàng đầu được tìm thấy bởi Beam Search.
 
 -   **Xác định Sequence tốt nhất:** Trong demo này, sequence tốt nhất được xác định là chuỗi đầu tiên trong danh sách các chuỗi được trả về bởi hàm `model.generate()` khi sử dụng beam search với tham số `num_return_sequences`. Hàm này trả về các chuỗi theo thứ tự xác suất giảm dần, do đó chuỗi đầu tiên là chuỗi có xác suất cao nhất trong số các chuỗi được trả về.
 -   **Trực quan hóa:** Script này cũng tô màu sự khác biệt giữa các chuỗi ứng viên được tạo ra (so sánh với chuỗi đầu tiên) để bạn thấy được sự đa dạng trong các kết quả hàng đầu.
